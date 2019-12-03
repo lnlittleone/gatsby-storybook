@@ -7,7 +7,8 @@ export const NavLink = styled.a({
   fontSize : '1.5rem',
   color : theme.pink,
   fontFamily: theme.mainFont,
-  padding : '0 1rem',
+  padding : '0.8rem',
+  boxSizing : 'border-box',
 
   '&:hover' : {
     color : theme.yellow,

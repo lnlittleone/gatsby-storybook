@@ -6,4 +6,7 @@ export const SiteHeader = styled.header({
   color : theme.typo,
   fontSize : '1.5rem',
   height:'4rem',
+  display : 'flex',
+  justifyContent: 'flex-end',
+  alignItems : 'center',
 })

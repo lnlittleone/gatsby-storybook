@@ -1,7 +1,7 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react'
-import { withKnobs, text } from "@storybook/addon-knobs";
-import { SimpleButton } from "./Buttons"
+import { withKnobs, text, boolean } from "@storybook/addon-knobs"
+import { Checkbox, SimpleButton } from "./Buttons"
 import { action } from "@storybook/addon-actions"
 import { Button } from '@storybook/react/demo';
 
@@ -21,6 +21,12 @@ storiesOf("Buttons", module).addDecorator(withKnobs)
     </span>
     </Button>
   })
+  .add('Checkbox', ()=> {
+    const booly = boolean('truthy', false)
+    return<><Checkbox type="checkbox" checked={booly}/><label> Mealthy ? </label></>
+  })
+
+
 
 
 

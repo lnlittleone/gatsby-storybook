@@ -1,18 +1,27 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import {theme} from '../../theme'
 
 export const SimpleButton = styled.button({
-  background : 'purple',
+  background : theme.main,
   fontSize : '1rem',
-  borderRadius :'0.5rem',
-  padding: '0.35rem',
-  color : 'beige',
+  borderRadius :'3rem',
+  padding: '0.5 1rem',
+  color : theme.typo,
   textAlign: 'center',
   border : 'none',
-  fontFamily : 'Trebuchet, Arial, sans-serif',
+  fontFamily : theme.mainFont,
 
   '&:hover' :{
-    background : 'pink',
-    color: 'grey'
+    background : theme.mint,
+    color: theme.secondaryColor,
   }
+})
+
+export const Checkbox = styled.input({
+  background: theme.mint,
+   '& + label' : {
+    color : theme.purple,
+    fontFamily : theme.mainFont
+   }
 })

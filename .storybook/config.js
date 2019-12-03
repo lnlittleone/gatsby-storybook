@@ -1,5 +1,7 @@
 import { configure } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
+import { addParameters } from '@storybook/react';
+import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 
 // automatically import all files ending in *.stories.js
 configure(require.context("../src", true, /\.stories\.js$/), module)
@@ -16,3 +18,14 @@ global.__PATH_PREFIX__ = ""
 window.___navigate = pathname => {
   action("NavigateTo:")(pathname)
 }
+
+addParameters({
+  docs: {
+    container: DocsContainer,
+    page: DocsPage,
+  },
+  viewport: {
+    viewports: newViewports, // newViewports would be an ViewportMap. (see below for examples)
+    defaultViewport: 'someDefault',
+  },
+});

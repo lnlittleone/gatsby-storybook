@@ -1,7 +1,8 @@
 import styled from "@emotion/styled"
 import {theme} from '../../theme'
 
-export const Tags = styled.div({
+
+export const OrangeTag = styled.div({
   width : '3rem',
   height : '3rem',
   borderRadius : '1rem',
@@ -12,3 +13,15 @@ export const Tags = styled.div({
   alignItems : 'center',
   fontFamily : theme.mainFont,
 })
+
+export const PinkTag = styled.a({
+  backgroundColor: theme.pink,
+}).withComponent(OrangeTag)
+
+export const YellowTag = styled.a({
+  backgroundColor: theme.yellow,
+}).withComponent(OrangeTag)
+
+export const MintTag = styled.a({
+  backgroundColor: theme.mint,
+}).withComponent(OrangeTag)

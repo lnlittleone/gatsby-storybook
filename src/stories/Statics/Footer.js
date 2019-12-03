@@ -12,4 +12,5 @@ export const SiteFooter = styled.footer({
   alignItems : 'center',
   height: '3.5rem',
   color: theme.typo,
+  fontFamily: theme.mainFont,
 })
