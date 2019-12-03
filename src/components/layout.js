@@ -9,8 +9,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import {theme} from '../theme'
 import Header from "./header"
 import "./layout.css"
+import { SiteFooter } from "../stories/Statics/Footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -34,12 +36,13 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <main>{children}</main>
-        <footer>
+        <main style={{background: theme.secondaryColor, width:'100%',   fontFamily : 'Avenir Next Condensed, Arial'
+        }}>{children}</main>
+        <SiteFooter>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        </SiteFooter>
       </div>
     </>
   )
