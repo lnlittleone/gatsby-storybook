@@ -16,3 +16,11 @@ export const NavLink = styled.a({
     borderRadius : '0.5rem',
   }
 })
+
+export const Links = styled.a({
+  fontFamily: theme.mainFont,
+  color : theme.mint,
+  fontSize: '1.1rem',
+  textDecoration: 'none',
+  padding : '0 0.2rem'
+})
